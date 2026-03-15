@@ -42,7 +42,9 @@ def keep_alive():
 # --- End Flask Keep Alive ---
 
 # --- Configuration ---
-TOKEN = '8357597112:AAFWHEzynOZkfBd7o3sFzucCV9gyi2Z4Tjs' 
+TOKEN = os.environ.get('BOT_TOKEN', '')
+if not TOKEN:
+    raise ValueError("❌ BOT_TOKEN environment variable not set!")
 OWNER_ID = 6302016869
 ADMIN_ID = 7029208449
 YOUR_USERNAME = '@Sudeephu'
