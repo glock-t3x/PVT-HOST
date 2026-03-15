@@ -7,9 +7,7 @@ import shutil
 from telebot import types
 import time
 from datetime import datetime, timedelta
-# Removed unused telegram.* imports as we are using telebot consistently
-# from telegram import Update
-# from telegram.ext import Updater, CommandHandler, CallbackContext
+
 import psutil
 import sqlite3
 import json # Kept in case needed elsewhere, but not used in provided logic
